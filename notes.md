@@ -1,0 +1,1 @@
+“Let I be the number of k-means iterations and L be the number of repetitions then the total number of integrals is L × I × K × M. Typical values are K ∼ 10, I ∼ 10K and L ∼ 100.”

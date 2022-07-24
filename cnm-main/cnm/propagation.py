@@ -183,7 +183,8 @@ if __name__=="__main__":
     # --------------------------------------------------------------------------
     cluster_config = {
             'data': data,
-            'cluster_algo': KMeans(n_clusters=K,max_iter=1000,n_init=100,n_jobs=-1),
+            'cluster_algo': KMeans(n_clusters=K,max_iter=1000,n_init=100),
+            'dataset': 'dummy'
             }
     from clustering import Clustering
     from transition_properties import TransitionProperties

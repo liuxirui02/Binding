@@ -53,7 +53,7 @@ def run_ecg():
     # ----------
     cluster_config = {
             'data': data,
-            'cluster_algo': KMeans(n_clusters=K,max_iter=1000,n_init=100,n_jobs=-1),
+            'cluster_algo': KMeans(n_clusters=K,max_iter=1000,n_init=100),
             'dataset': 'ecg', # To store the centroids properly
             }
 

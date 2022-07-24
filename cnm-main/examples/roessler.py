@@ -44,7 +44,7 @@ def run_roessler():
     # ----------
     cluster_config = {
             'data': data,
-            'cluster_algo': KMeans(n_clusters=K,max_iter=300,n_init=10,n_jobs=-1),
+            'cluster_algo': KMeans(n_clusters=K,max_iter=300,n_init=10),
             'dataset': 'roessler',
             }
 
@@ -85,7 +85,7 @@ def run_roessler():
     # time series
     time_range = (0,100)
     plot_label = ['x','y','z']
-    plot_time_series(t,data,t_hat,x_hat,time_range)
+    plot_time_series(t,data,t_hat,x_hat,time_range,plot_label)
 
     # cluster probability distribution
     plot_cpd(data,x_hat)

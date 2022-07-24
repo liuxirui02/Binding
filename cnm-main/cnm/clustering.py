@@ -110,7 +110,7 @@ if __name__=='__main__':
     # perform clustering
     cluster_config = {
             'data': data,
-            'cluster_algo': KMeans(n_clusters=k,max_iter=1000,n_init=100,n_jobs=-1),
+            'cluster_algo': KMeans(n_clusters=k,max_iter=1000,n_init=100),
             'dataset': 'dummy',
             }
     clustering = Clustering(**cluster_config)

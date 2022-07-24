@@ -156,7 +156,7 @@ def plot_phase_space_3d(n_cl,data,centroids,labels):
             'o',
             color='k',
             zorder=5,
-            markersize=7.5,
+            markersize=5,
             )
 
     # Background and no axes
@@ -215,7 +215,8 @@ def plot_time_series(t,x,t_hat,x_hat,time_range,plot_label,n_dim=3):
     elif n_dim == 3:
         fig_size = (6,4.5)
     else:
-        raise Exception('Define a figure size for n_dim={}'.format(n_dim))
+        fig_size = (6, n_dim*1.5)
+        #raise Exception('Define a figure size for n_dim={}'.format(n_dim))
 
     # Initialize figure
     if n_dim == 1:
@@ -320,7 +321,7 @@ def plot_cpd(x,x_hat):
     # Re-cluster original and CNM data with 10 clusters only for clarity
     from sklearn.cluster import KMeans
     K = 10
-    kmeans = KMeans(n_clusters=K,max_iter=300,n_init=10,n_jobs=-1)
+    kmeans = KMeans(n_clusters=K,max_iter=300,n_init=10)
     kmeans.fit(x)
     labels = kmeans.labels_
 

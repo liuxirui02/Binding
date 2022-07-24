@@ -44,7 +44,7 @@ def run_boundary_layer():
     # ----------
     cluster_config = {
             'data': data,
-            'cluster_algo': KMeans(n_clusters=K,max_iter=300,n_init=100,n_jobs=-1),
+            'cluster_algo': KMeans(n_clusters=K,max_iter=300,n_init=100),
             'dataset': 'boundary_layer',
             }
 

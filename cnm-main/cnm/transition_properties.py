@@ -280,7 +280,8 @@ if __name__=='__main__':
     T_test = np.load('test_data/T-K{}-L{}.npy'.format(K,L),allow_pickle=True).item()
     cluster_config = {
             'data': data,
-            'cluster_algo': KMeans(n_clusters=K,max_iter=1000,n_init=100,n_jobs=-1),
+            'cluster_algo': KMeans(n_clusters=K,max_iter=1000,n_init=100),
+            'dataset': 'dummy'
             }
     from clustering import Clustering
     clustering = Clustering(**cluster_config)

@@ -45,7 +45,7 @@ def run_kolmogorov():
     # ----------
     cluster_config = {
             'data': data,
-            'cluster_algo': KMeans(n_clusters=K,max_iter=300,n_init=10,n_jobs=-1),
+            'cluster_algo': KMeans(n_clusters=K,max_iter=300,n_init=10),
             'dataset': 'kolmogorov',
             }
 
